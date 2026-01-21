@@ -448,6 +448,8 @@ Vertical scaling (bigger server) gets you very far. If you need horizontal scali
 ### "Is this production-ready?"
 The architecture is production-ready. The implementation is ~40% complete. Complete the remaining components following the implementation guide.
 
+**Next Steps**: See [IMPLEMENTATION.md](IMPLEMENTATION.md) to complete the remaining components.
+
 ---
 
 ## Final Words
@@ -466,6 +468,7 @@ And that's the point.
 
 ---
 
-**System Status**: Architecture complete, core components implemented, ready for full implementation.
+## Donate 
 
-**Next Steps**: See [IMPLEMENTATION.md](IMPLEMENTATION.md) to complete the remaining components.
+To support the developer, you can <a href="https://buy.stripe.com/14AaEWfRXcm5aPrfSag360b">make a donation here<a>.
+
