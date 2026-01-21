@@ -1,0 +1,66 @@
+<h2>Dashboard</h2>
+
+<div class="alert alert-info">
+    Welcome back, {{user_email}}!
+</div>
+
+<h3>Account Information</h3>
+<table>
+    <tr>
+        <th>Account Name</th>
+        <td>{{account_name}}</td>
+    </tr>
+    <tr>
+        <th>Account Status</th>
+        <td>{{account_status}}</td>
+    </tr>
+    <tr>
+        <th>Subscription Plan</th>
+        <td>{{subscription_plan}}</td>
+    </tr>
+    <tr>
+        <th>Subscription Status</th>
+        <td>{{subscription_status}}</td>
+    </tr>
+    <tr>
+        <th>Valid Until</th>
+        <td>{{subscription_valid_until}}</td>
+    </tr>
+</table>
+
+{{#if_grace_period}}
+<div class="alert alert-error">
+    Your subscription is in a grace period. Please contact billing to renew.
+</div>
+{{/if_grace_period}}
+
+{{#if_free_plan}}
+<div class="alert alert-info">
+    <p><strong>Upgrade to Pro for advanced features:</strong></p>
+    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+        <li>Extended date range for reports (unlimited vs 7 days)</li>
+        <li>CSV export</li>
+        <li>Report grouping (by day, week, month)</li>
+        <li>Priority support</li>
+    </ul>
+    <p style="margin-top: 1rem;">
+        <a href="/billing" class="button">View Upgrade Options</a>
+    </p>
+</div>
+{{/if_free_plan}}
+
+<h3>Quick Links</h3>
+<ul style="list-style: none; margin-top: 1rem;">
+    <li style="margin-bottom: 0.5rem;">
+        <a href="/reports" class="button">View Reports</a>
+    </li>
+    <li style="margin-bottom: 0.5rem;">
+        <a href="/billing" class="button button-secondary">Manage Billing</a>
+    </li>
+</ul>
+
+<h3>System Information</h3>
+<p style="color: #7f8c8d; margin-top: 1rem;">
+    This system is designed to run for 50+ years with minimal maintenance.
+    All data is stored locally in SQLite. No external dependencies required.
+</p>

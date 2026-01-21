@@ -1,0 +1,30 @@
+<h2>Login</h2>
+
+{{#if_error}}
+<div class="alert alert-error">
+    {{error_message}}
+</div>
+{{/if_error}}
+
+<form method="POST" action="/login">
+    <input type="hidden" name="csrf_token" value="{{csrf_token}}">
+
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required autofocus>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="button">Login</button>
+    </div>
+</form>
+
+<p style="margin-top: 2rem; color: #7f8c8d;">
+    This system uses server-side rendering with no JavaScript required.
+    Sessions expire after 30 days of inactivity.
+</p>

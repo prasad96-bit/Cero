@@ -53,3 +53,18 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Core SaaS Platform specific
+cero
+data/app.db
+data/app.db-wal
+data/app.db-shm
+data/*.db
+logs/*.log
+logs/*.log.*
+backups/*.db
+backups/*.sql
+config/secrets.txt
+.DS_Store
+.vscode/
+.idea/

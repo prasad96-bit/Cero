@@ -1,0 +1,22 @@
+# Core SaaS Platform - Configuration File
+# Format: KEY=VALUE
+# Lines starting with # are comments
+
+# Server Configuration
+HOST=0.0.0.0
+PORT=8080
+
+# Database Configuration
+DB_PATH=data/app.db
+
+# Logging Configuration
+LOG_PATH=logs/app.log
+LOG_LEVEL=INFO
+
+# Session Configuration
+# 30 days in seconds
+SESSION_EXPIRY_SECONDS=2592000
+
+# Rate Limiting
+# Maximum requests per minute per IP
+RATE_LIMIT_REQUESTS_PER_MINUTE=60
