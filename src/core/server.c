@@ -8,6 +8,7 @@
 #include "response.h"
 #include "router.h"
 #include "../utils/log.h"
+#include "../utils/string_utils.h"
 #include "../auth/session.h"
 #include "../utils/ratelimit.h"
 
@@ -124,7 +125,7 @@ void server_handle_client(int client_socket) {
     }
 
     /* Set client info */
-    strncpy(req.client_ip, client_ip, sizeof(req.client_ip) - 1);
+    safe_strncpy(req.client_ip, client_ip, sizeof(req.client_ip));
     req.client_port = client_port;
 
     /* Check rate limit */
