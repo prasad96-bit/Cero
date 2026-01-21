@@ -4,10 +4,6 @@
 
 ## Philosophy
 
-This is NOT a modern web app.
-This is NOT a startup MVP.
-This is NOT a framework-based system.
-
 This is a **durable, boring, self-contained SaaS platform** designed to operate for 50+ years with near-zero maintenance and no runtime dependencies on third-party services.
 
 ## Design Principles
