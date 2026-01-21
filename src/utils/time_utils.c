@@ -3,6 +3,7 @@
  * All times stored and processed as UTC
  */
 
+#define _GNU_SOURCE
 #include "time_utils.h"
 #include <stdio.h>
 #include <string.h>

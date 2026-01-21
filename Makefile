@@ -12,19 +12,40 @@ OBJ_DIR = obj
 
 # Source files (to be implemented)
 CORE_SOURCES = \
-	$(SRC_DIR)/core/server.c
+	$(SRC_DIR)/core/server.c \
+	$(SRC_DIR)/core/request.c \
+	$(SRC_DIR)/core/response.c \
+	$(SRC_DIR)/core/router.c
 
 UTILS_SOURCES = \
 	$(SRC_DIR)/utils/log.c \
 	$(SRC_DIR)/utils/time_utils.c \
 	$(SRC_DIR)/utils/config.c \
-	$(SRC_DIR)/utils/db.c
+	$(SRC_DIR)/utils/db.c \
+	$(SRC_DIR)/utils/string_utils.c \
+	$(SRC_DIR)/utils/ratelimit.c
+
+AUTH_SOURCES = \
+	$(SRC_DIR)/auth/auth.c \
+	$(SRC_DIR)/auth/session.c
+
+BILLING_SOURCES = \
+	$(SRC_DIR)/billing/subscription.c \
+	$(SRC_DIR)/billing/entitlement.c \
+	$(SRC_DIR)/billing/admin.c
+
+REPORTS_SOURCES = \
+	$(SRC_DIR)/reports/reports.c \
+	$(SRC_DIR)/reports/csv.c
+
+TEMPLATE_SOURCES = \
+	$(SRC_DIR)/templates/template.c
 
 # Main source
 MAIN_SOURCE = $(SRC_DIR)/main.c
 
 # All sources (add more as implemented)
-SOURCES = $(MAIN_SOURCE) $(CORE_SOURCES) $(UTILS_SOURCES)
+SOURCES = $(MAIN_SOURCE) $(CORE_SOURCES) $(UTILS_SOURCES) $(AUTH_SOURCES) $(BILLING_SOURCES) $(REPORTS_SOURCES) $(TEMPLATE_SOURCES)
 
 # Object files
 OBJECTS = $(SOURCES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
